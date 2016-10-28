@@ -1,7 +1,7 @@
 $(function(){
 
 	$.ajax({
-		url: "http://netflixroulette.net/api/api.php",
+		url: "https://netflixroulette.net/api/api.php",
 		
 		data:{
 			title: "The Big Boss"
