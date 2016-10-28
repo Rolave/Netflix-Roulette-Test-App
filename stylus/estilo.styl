@@ -1,0 +1,188 @@
+/* colores */
+anaranjado = #fe5722
+rojo = #f54040
+verde = #15e714
+verde-claro = #68f1ad
+celeste = #e5f5fd
+gris-medio = #424242
+gris-claro = #ebeef3
+amarillo = #ffcc00
+turquesa = #3bc3c5
+/* Prefijos */
+backdrop-filter()
+	-webkit-backdrop-filter arguments
+	backdrop-filter arguments
+border-radius()
+	-webkit-border-radius arguments
+	-moz-border-radius arguments
+	border-radius arguments
+box-shadow()
+	-webkit-box-shadow arguments
+	-moz-box-shadow arguments
+	box-shadow arguments
+filter()
+	-webkit-filter arguments
+	filter arguments
+transition()
+	-webkit-transition arguments
+	-moz-transition arguments
+	-ms-transition arguments
+	-o-transition arguments
+	transition arguments
+transform()
+	-webkit-transform arguments
+	-moz-transform arguments
+	-ms-transform arguments
+	-o-transform arguments
+	transform arguments
+*
+	margin 0
+	padding 0
+html
+	-webkit-font-smoothing antialiased
+body
+	background white
+	font-family "Open Sans", sans-serif
+	font-size 14px
+	color gris-medio
+.main
+	padding 0
+	.app
+		background-attachment fixed
+		background-color black
+		background-position 50% 50%
+		background-size 250%
+		border-radius 10px
+		height 100vh
+		margin 0
+		padding 0
+		.header
+			align-items center
+			backdrop-filter blur(15px)
+			background rgba(black,.8)
+			color white
+			display flex
+			font-size 2em
+			height 10vh
+			justify-content center
+			text-align center
+			figure
+				height 80%
+				img
+					height 100%
+					vertical-align top
+.image
+	background-attachment fixed
+	background-position 50% 50%
+	background-repeat no-repeat
+	background-size cover
+	height 80vh
+	position relative
+	figure
+		margin 0
+		padding 0
+		img
+			vertical-align top
+			width 100%
+	.info
+		background rgba(black, .5)
+		bottom 0
+		backdrop-filter blur(10px)
+		left 0
+		margin 0
+		padding 0
+		position absolute
+		right 0
+		.title
+			margin 0
+			padding 15px 10px 15px 10px
+			position relative
+			text-transform uppercase
+			&::before
+				content ''
+				width 50%
+				background rgba(rojo,.8)
+				height 2px
+				display block
+				position absolute
+				top -2px
+				left 0
+			h3
+				color anaranjado
+				font-size 1.2em
+				font-weight 200
+				letter-spacing .05em
+				margin 0
+				padding 0 50px 0 0
+			.rating
+				align-items center
+				background rojo
+				border-radius 30px
+				color white
+				display flex
+				font-size 1em
+				font-weight 100
+				height 60px
+				justify-content center
+				opacity .8
+				overflow hidden
+				position absolute
+				right 10px
+				top -30px
+				width 60px
+				.fa
+					padding-left 2.5px
+		.description
+			color gris-claro
+			font-weight 100
+			font-size .9em
+			margin 0 
+			padding 0 10px 10px
+			p
+				border-bottom rgba(rojo,.5) 1px dotted
+				padding-bottom 10px
+			.additional-information
+				margin 0
+				padding 0
+				li
+					border rojo 1px solid
+					border-radius 10px
+					display inline-block
+					line-height 20px
+					margin-right 5px
+					padding 0 10px
+.buttons
+	backdrop-filter blur(10px)
+	height 10vh
+	margin 0
+	.like, .dislike
+		align-items center
+		color white
+		cursor pointer
+		display flex
+		font-size 1.8em
+		height 100%
+		justify-content center
+		opacity .8
+		text-align center
+		transition all .3s ease-in-out
+		&:hover
+			opacity 1
+	.like
+		background verde-claro
+	.dislike
+		background rojo
+.liu-kang
+	bottom 10vh
+	display none
+	left 50%
+	position absolute
+	transition all .5s ease-in-out
+	width 50vw
+	figure
+		width 100%
+		img
+			vertical-align top
+			width 100%
+	&.fight
+		display inline
