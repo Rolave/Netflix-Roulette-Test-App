@@ -22,6 +22,8 @@ $(function(){
 		});
 		$('.movies').html(movie);
 		$('.image').first().fadeIn('fast');
+		$('.rating').delay(1000).fadeIn('fast','swing');
+		$('.rating').animate({top: '-30px'},'fast', 'swing');
 		$(".dislike").click(function(e){
 			$('.image').first().fadeOut("fast", function(){
 				$(this).remove();
