@@ -9,6 +9,11 @@ gris-claro = #ebeef3
 amarillo = #ffcc00
 turquesa = #3bc3c5
 /* Prefijos */
+animation()
+	-webkit-animation arguments
+	-moz-animation arguments
+	-o-animation arguments
+	animation arguments
 backdrop-filter()
 	-webkit-backdrop-filter arguments
 	backdrop-filter arguments
@@ -46,13 +51,24 @@ body
 	font-size 14px
 	color gris-medio
 .loader
-	background rgba(rojo,.9)
+	align-items center
+	background rgba(black,.85)
+	background-image url('../images/netflix_logo.png')
+	background-position 50% 40%
+	background-repeat no-repeat
+	background-size 60%
 	bottom 0
+	color white
+	display flex
+	justify-content center
 	left 0
 	position absolute
 	right 0
 	top 0
 	z-index 1
+	i
+		animation 1s linear infinite rotate
+		font-size 2em
 .main
 	padding 0
 	.app
@@ -205,3 +221,10 @@ body
 		background verde-claro
 	.dislike
 		background rojo
+/* CSS Animations */
+@keyframes rotate
+	from
+		transform rotate(0deg)
+	to
+		transform rotate(360deg)
+transform rotate(0deg) to{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-o-transform:rotate(360deg);transform:rotate(360deg)}

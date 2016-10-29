@@ -1,8 +1,7 @@
+$(window).load(function() {
+	$('.loader').fadeOut('slow');
+});
 $(function(){
-
-	$(window).load(function() {
-		$('.loader').fadeOut('slow').hide();
-	});
 
 	$.ajax({
 		url: "https://netflixroulette.net/api/api.php",
