@@ -63,7 +63,9 @@ $(function(){
 
 			$(document).unbind('keydown',arguments.callee);
 			// do something awesome
-			$(".liu-kang").css({right: '100vw'});
+			$(".liu-kang").css({right: '100%'}, function(){
+				$(this).hide();
+			});
 			var audio = {};
 			audio["walk"] = new Audio();
 			audio["walk"].src = "sounds/LiuTrke1.wav"
