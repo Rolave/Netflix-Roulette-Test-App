@@ -26,7 +26,7 @@ $(function(){
 		});
 		$('.movies').html(movie);
 		$('.image').first().fadeIn('fast');
-		$('.rating').css({top: '30px', opacity: 0});
+		$('.rating').css({top: '-10px', opacity: 0});
 		$('.rating').first().delay(600).show().animate({top: '-30px', opacity: 0.8},300, 'swing');
 		$(".dislike").click(function(e){
 			$('.image').first().fadeOut("fast", function(){
@@ -40,7 +40,7 @@ $(function(){
 				$(this).clone().appendTo('.movies');
 				$(this).remove();
 				$('.image').first().fadeIn('fast');
-				$('.rating').css({top: '30px', opacity: 0});
+				$('.rating').css({top: '-10px', opacity: 0});
 				$('.rating').first().delay(600).show().animate({top: '-30px', opacity: 0.8},300, 'swing');
 
 			});
