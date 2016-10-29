@@ -50,9 +50,9 @@ body
 	.app
 		background-attachment fixed
 		background-color black
-		background-image url('../images/bruce_lee_default_poster.jpg')
 		background-position center top
-		background-size 250%
+		background-repeat no-repeat
+		background-size cover
 		height 100vh
 		margin 0
 		padding 0
@@ -74,14 +74,16 @@ body
 .movies
 	height 80vh
 	overflow hidden
+	position relative
 	.image
 		background-attachment fixed
 		background-image url('../images/bruce_lee_default_poster.jpg')
 		background-position 50% top
 		background-repeat no-repeat
 		background-size cover
+		display none
 		height 80vh
-		position relative
+		top 0
 		figure
 			margin 0
 			padding 0

@@ -21,15 +21,18 @@ $(function(){
 			movie += '</div></div></div>';
 		});
 		$('.movies').html(movie);
+		$('.image').first().fadeIn('fast');
 		$(".dislike").click(function(e){
-			$('.image').first().fadeOut("slow", function(){
-				$('.image').first().remove();
+			$('.image').first().fadeOut("fast", function(){
+				$(this).remove();
+				$('.image').first().fadeIn('fast');
 			});
 		});
 		$(".like").click(function(e){
-			$('.image').first().fadeOut("slow", function(){
+			$('.image').first().fadeOut("fast", function(){
 				$(this).clone().appendTo('.movies');
 				$(this).remove();
+				$('.image').first().fadeIn('fast');
 			});
 		});
 
