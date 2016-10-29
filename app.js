@@ -1,5 +1,5 @@
 $(window).load(function() {
-	$('.loader').fadeOut('slow');
+	$('.loader').css({transform: 'scale(1.5, 1.5)', opacity: 0});
 });
 $(function(){
 
