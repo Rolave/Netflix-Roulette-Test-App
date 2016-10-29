@@ -26,11 +26,13 @@ $(function(){
 		});
 		$('.movies').html(movie);
 		$('.image').first().fadeIn('fast');
-		$('.rating').first().delay(800).show().animate({top: '-30px', opacity: 0.8},300, 'swing');
+		$('.rating').css({top: '30px', opacity: 0});
+		$('.rating').first().delay(600).show().animate({top: '-30px', opacity: 0.8},300, 'swing');
 		$(".dislike").click(function(e){
 			$('.image').first().fadeOut("fast", function(){
 				$(this).remove();
 				$('.image').first().fadeIn('fast');
+				$('.rating').first().delay(600).show().animate({top: '-30px', opacity: 0.8},300, 'swing');
 			});
 		});
 		$(".like").click(function(e){
@@ -38,6 +40,9 @@ $(function(){
 				$(this).clone().appendTo('.movies');
 				$(this).remove();
 				$('.image').first().fadeIn('fast');
+				$('.rating').css({top: '30px', opacity: 0});
+				$('.rating').first().delay(600).show().animate({top: '-30px', opacity: 0.8},300, 'swing');
+
 			});
 		});
 
