@@ -1,5 +1,9 @@
 $(function(){
 
+	$(window).load(function() {
+		$('.loader').fadeOut().hide();
+	});
+
 	$.ajax({
 		url: "https://netflixroulette.net/api/api.php",
 		
@@ -22,8 +26,7 @@ $(function(){
 		});
 		$('.movies').html(movie);
 		$('.image').first().fadeIn('fast');
-		$('.rating').delay(1000).fadeIn('fast','swing');
-		$('.rating').animate({top: '-30px'},'fast', 'swing');
+		$('.rating').first().delay(800).show().animate({top: '-30px', opacity: 0.8},300, 'swing');
 		$(".dislike").click(function(e){
 			$('.image').first().fadeOut("fast", function(){
 				$(this).remove();
