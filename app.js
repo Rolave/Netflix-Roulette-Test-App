@@ -1,7 +1,7 @@
 $(function(){
 
 	$(window).load(function() {
-		$('.loader').fadeOut().hide();
+		$('.loader').fadeOut('slow').hide();
 	});
 
 	$.ajax({
@@ -63,7 +63,7 @@ $(function(){
 
 			$(document).unbind('keydown',arguments.callee);
 			// do something awesome
-			$(".liu-kang").addClass("fight");
+			$(".liu-kang").css({right: '100vw'});
 			var audio = {};
 			audio["walk"] = new Audio();
 			audio["walk"].src = "sounds/LiuTrke1.wav"
@@ -81,8 +81,8 @@ $(function(){
 		}
 	});
 	$(".liu-kang").click(function(e){
-		$(this).children().animate({opacity: '0'}, 500, function(){
-			$(this).parent().removeClass("fight");
+		$(this).animate({opacity: '0'}, 500, function(){
+			$(this).removeClass("fight");
 		});
 		kkeys = [];
 	});

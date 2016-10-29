@@ -61,9 +61,12 @@ body
 		background-position center top
 		background-repeat no-repeat
 		background-size cover
+		display block
 		height 100vh
 		margin 0
+		overflow hidden
 		padding 0
+		width 100%
 		.header
 			align-items center
 			backdrop-filter blur(15px)
@@ -79,6 +82,19 @@ body
 				img
 					height 100%
 					vertical-align top
+		.liu-kang
+			bottom 10vh
+			position absolute
+			right -30vw
+			transition all 1.5s ease-in-out
+			width 30vw
+			figure
+				width 100%
+				img
+					vertical-align top
+					width 100%
+			&.fight
+				display inline
 .movies
 	height 80vh
 	overflow hidden
@@ -185,28 +201,9 @@ body
 		justify-content center
 		opacity .8
 		text-align center
-		transition all .3s ease-in-out
 		&:hover
 			opacity 1
 	.like
 		background verde-claro
 	.dislike
 		background rojo
-.liu-kang
-	background-image url('../images/liu_kang.gif')
-	background-position 50% 50%
-	background-size cover
-	bottom 10vh
-	display none
-	height 10vh
-	left 50%
-	position absolute
-	transition all .5s ease-in-out
-	width 50vw
-	figure
-		width 100%
-		img
-			vertical-align top
-			width 100%
-	&.fight
-		display inline
