@@ -4,18 +4,35 @@ $(function(){
 		url: "https://netflixroulette.net/api/api.php",
 		
 		data:{
-			title: "The Big Boss"
+			actor: "Bruce Lee"
 		},
 		type: "GET",
 		dataType: "json"
 	})
 	.done(function( json ) {
-		$(".app" ).css( "background-image", "url("+json.poster+")" );
-		$(".title h3" ).html(json.show_title);
-		$(".rating").append(json.rating+'<i class="fa fa-star" aria-hidden="true"></i>');
-		$(".description p" ).html( json.summary );
-		$(".additional-information").append('<li>'+json.release_year+'<li>'+json.runtime+'</li><li>'+json.category+'</li>');
-		$(".image" ).css( "background-image", "url("+json.poster+")" );
+		var movie = '';
+		$.each(json, function(i, val){
+			movie += '<div class="image" style="background-image: url('+json[i].poster+');"><div class="info"><div class="title">';
+			movie += '<h3>'+json[i].show_title+'</h3>';
+			movie += '<h5><strong>Director:</strong> '+json[i].director+'</h5>';
+			movie += '<div class="rating">'+json[i].rating+'<i class="fa fa-star" aria-hidden="true"></i></div></div>';
+			movie += '<div class="description"><p>'+json[i].summary+'</p>';
+			movie += '<ul class="additional-information"><li>'+json[i].release_year+'</li><li>'+json[i].runtime+'</li><li>'+json[i].category+'</li></ul></div>';
+			movie += '</div></div></div>';
+		});
+		$('.movies').html(movie);
+		$(".dislike").click(function(e){
+			$('.image').first().fadeOut("slow", function(){
+				$('.image').first().remove();
+			});
+		});
+		$(".like").click(function(e){
+			$('.image').first().fadeOut("slow", function(){
+				$(this).clone().appendTo('.movies');
+				$(this).remove();
+			});
+		});
+
 	})
 	.fail(function( xhr, status, errorThrown ) {
 		alert( "Sorry, there was a problem!" );
@@ -39,6 +56,20 @@ $(function(){
 			$(document).unbind('keydown',arguments.callee);
 			// do something awesome
 			$(".liu-kang").addClass("fight");
+			var audio = {};
+			audio["walk"] = new Audio();
+			audio["walk"].src = "sounds/LiuTrke1.wav"
+			audio["walk"].addEventListener('load', function () {
+				audio["walk"].play();
+			});
+			}
+	});
+	$(document).keydown(function(e) {
+		// ESCAPE key pressed
+		if (e.keyCode == 27) {
+			$(".liu-kang").animate({opacity: '0'}, 500, function(){
+				$(this).removeClass("fight");
+			});
 		}
 	});
 	$(".liu-kang").click(function(e){

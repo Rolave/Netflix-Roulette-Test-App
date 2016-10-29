@@ -50,9 +50,9 @@ body
 	.app
 		background-attachment fixed
 		background-color black
-		background-position 50% 50%
+		background-image url('../images/bruce_lee_default_poster.jpg')
+		background-position center top
 		background-size 250%
-		border-radius 10px
 		height 100vh
 		margin 0
 		padding 0
@@ -71,86 +71,96 @@ body
 				img
 					height 100%
 					vertical-align top
-.image
-	background-attachment fixed
-	background-position 50% 50%
-	background-repeat no-repeat
-	background-size cover
+.movies
 	height 80vh
-	position relative
-	figure
-		margin 0
-		padding 0
-		img
-			vertical-align top
-			width 100%
-	.info
-		background rgba(black, .5)
-		bottom 0
-		backdrop-filter blur(10px)
-		left 0
-		margin 0
-		padding 0
-		position absolute
-		right 0
-		.title
+	overflow hidden
+	.image
+		background-attachment fixed
+		background-image url('../images/bruce_lee_default_poster.jpg')
+		background-position 50% top
+		background-repeat no-repeat
+		background-size cover
+		height 80vh
+		position relative
+		figure
 			margin 0
-			padding 15px 10px 15px 10px
-			position relative
-			text-transform uppercase
-			&::before
-				content ''
-				width 50%
-				background rgba(rojo,.8)
-				height 2px
-				display block
-				position absolute
-				top -2px
-				left 0
-			h3
-				color anaranjado
-				font-size 1.2em
-				font-weight 200
-				letter-spacing .05em
+			padding 0
+			img
+				vertical-align top
+				width 100%
+		.info
+			background rgba(black, .5)
+			bottom 0
+			backdrop-filter blur(10px)
+			left 0
+			margin 0
+			padding 0
+			position absolute
+			right 0
+			.title
 				margin 0
-				padding 0 50px 0 0
-			.rating
-				align-items center
-				background rojo
-				border-radius 30px
-				color white
-				display flex
-				font-size 1em
+				padding 15px 10px 15px 10px
+				position relative
+				text-transform uppercase
+				&::before
+					content ''
+					width 50%
+					background rgba(rojo,.8)
+					height 2px
+					display block
+					position absolute
+					top -2px
+					left 0
+				h3
+					color anaranjado
+					font-size 1.2em
+					font-weight 200
+					letter-spacing .05em
+					margin 0
+					padding 0 50px 0 0
+				h5
+					color rgba(white,.65)
+					font-size .8em
+					margin 0
+					text-transform none
+				.rating
+					align-items center
+					background rojo
+					border-radius 30px
+					color white
+					display flex
+					font-size 1em
+					font-weight 100
+					height 60px
+					justify-content center
+					opacity .8
+					overflow hidden
+					position absolute
+					right 10px
+					top -30px
+					width 60px
+					.fa
+						padding-left 2.5px
+			.description
+				color gris-claro
 				font-weight 100
-				height 60px
-				justify-content center
-				opacity .8
-				overflow hidden
-				position absolute
-				right 10px
-				top -30px
-				width 60px
-				.fa
-					padding-left 2.5px
-		.description
-			color gris-claro
-			font-weight 100
-			font-size .9em
-			margin 0 
-			padding 0 10px 10px
-			p
-				border-bottom rgba(rojo,.5) 1px dotted
-				padding-bottom 10px
-			.additional-information
-				margin 0
-				padding 0
-				li
-					border rojo 1px solid
-					border-radius 10px
-					display inline-block
-					line-height 20px
-					margin-right 5px
-					padding 0 10px
+				font-size .9em
+				margin 0 
+				padding 0 10px 10px
+				p
+					border-bottom rgba(rojo,.5) 1px dotted
+					font-size .85em
+					padding-bottom 10px
+				.additional-information
+					margin 0
+					padding 0
+					li
+						border rojo 1px solid
+						border-radius 10px
+						display inline-block
+						line-height 20px
+						margin-right 5px
+						padding 0 10px
 .buttons
 	backdrop-filter blur(10px)
 	height 10vh
@@ -173,8 +183,12 @@ body
 	.dislike
 		background rojo
 .liu-kang
+	background-image url('../images/liu_kang.gif')
+	background-position 50% 50%
+	background-size cover
 	bottom 10vh
 	display none
+	height 10vh
 	left 50%
 	position absolute
 	transition all .5s ease-in-out
