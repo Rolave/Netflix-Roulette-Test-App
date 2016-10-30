@@ -1,5 +1,5 @@
 $(window).load(function() {
-	$('.loader').addClass('loaded').fadeOut();
+	$('.loader').addClass('loaded').hide(300);
 });
 $(function(){
 
