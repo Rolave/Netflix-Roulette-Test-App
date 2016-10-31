@@ -1,5 +1,5 @@
 $(window).load(function() {
-	$('.loader').addClass('loaded').hide(300);
+	$('.loader').addClass('loaded').delay(300).hide(300);
 });
 $(function(){
 
